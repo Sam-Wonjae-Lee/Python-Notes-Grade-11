@@ -1,0 +1,13 @@
+end=: causes a space to be printed after each number
+for num in range(10): 
+print(num, end=' ') 
+
+-the space inside the quotation marks determines the space between in the output
+
+\n: makes a new line
+print("Hello \n World!")
+
+-still counts the space
+
+"{:.2f}".format
+print("{:.2f}".format(39.54484700000000))

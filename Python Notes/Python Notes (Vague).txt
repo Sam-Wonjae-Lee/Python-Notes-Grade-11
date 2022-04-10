@@ -1,0 +1,218 @@
+https://www.w3schools.com/python/python_operators.asp -> recommended beginner website.
+- Anything that follows a # is a comment
+- Integers are Whole Numbers and Strings are Quotes
+- Floats are Integers with decimals
+Input -> int
+Float -> float
+-Input
+	Ex) name = input ("What is your name? ")
+                 print ("Your name is:", name+ "!")
+
+- 'print' is basically printing your input to the output
+	Ex) input: print ("Hello World")
+	     output: Hello World
+	Ex2) age = input ("How old are you? ")
+                   print ("You will be", age+"1", "next year!")
+
+- 'comma' Information separated by a comma will force the  information to be printed on the same line with one space in between the information. 
+
+-To print a blank line on the screen, just use the print command by  itself.  
+	Ex) print()
+
+-'tab' Placing \t in your string, forces the  information after the tab character to be printed on the same line but moved over to the next available tab stop (The tab stops are every 4 or 5 spaces in Python). 
+	Ex) print ("First Column\t\tSecond Column") 
+
+- Concatenation is joining two strings together
+	Ex) print ("Hello"+"World!")
+
+- 'type' is to know what a value is
+	Ex) n = 25
+	     print(type(n))
+
+- Boolean is to show two outcomes: 'True' & 'False'
+x == y		# is x equal to y
+x != y		# is x not equal to y
+x < y		# is x less than y
+x > y		# is x greater than y
+x <= y		# is x less than or equal to y
+x >= y		# is x greater than or equal to y
+
+not	#same as !
+in	#is something inside something
+is	#like equals, but more strict
+
+-Division
+/: Divides the number on its left by the number on its right and returns a floating point value.
+
+//: Divides the number on its left by the number on its right, rounds down the answer, and returns a whole number.
+
+%: Gives the remainder of the left value divided by the right value.
+
+- Logical Operators
+and
+The statement is true only IF both conditions are true
+or
+The statement is true as long as at least one of the conditions is true
+not
+Flips the result of the Boolean expression
+So true becomes false, and false becomes true*
+
+- If Statements (If, Elif, Else)
+If:
+Format: if <Boolean Expression>:
+	<statements>
+	Ex) query = input ("Do you want to see the phrase of the day?")
+
+	     if query == "yes" or query == "Yes":
+   	    	print("The phrase of the day is legend... wait for it...")
+   	    	print ("...dairy!!")
+Else:
+Format: if <Boolean expression>:
+		<statements>
+           else:
+		<statements>
+	Ex) query = input ("Do you want to see the of the day?")
+
+	    if query == "yes" or query == "Yes":
+    	    	print("The phrase of the day is legend... wait for it...")
+    	   	print ("...dairy!!")
+	    else:
+	   	print ("You’re not much fun are you...")
+Elif:
+	Ex) if x < y:
+    	   	print("x is less than y")
+ 	         elif x > y:
+    		print("x is greater than y")
+	         else:
+		print ("x and y are equal!")
+
+- Looping
+While Loop: execute a set of statements as long as a condition is true.
+Format: while <condition>:
+           <statements>
+	Ex) i = 0 
+	     while i < 10: 
+	     print (i)
+	     i = i + 1
+	Ex2) n = 5
+	      while n >= 0: 
+	      if n == 0:
+	      print ("Blastoff!")
+	      else:
+	      print (n)
+	      n = n-1	
+For Looping: iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+Format: for < variable > in < sequence >:
+    	< statements >
+		< statements >
+	< statements >
+
+-Square Brackets are use to indicate a list
+	Ex) groceries = [“milk”, “eggs”, “broccoli”]
+	     print(groceries)
+	     
+	     Output: [“milk”, “eggs”, “broccoli”]
+	
+	Ex2) groceries = [“milk”, “eggs”, “broccoli”]
+	      print (groceries[1]) 
+	      print (groceries[2]) 
+
+	      Output: eggs
+		    brocolli
+	Ex3) groceries = [“milk”, “eggs”, “broccoli”]
+	      print (groceries[-1]) 
+
+	      Output: broccoli
+Modifying Lists:
+	Ex) dinner = [“spaghetti”, “meatballs”, “salad”, “bread”, “pizza”]
+		print(dinner)
+
+	    dinner[0] = “dumplings”
+		print(dinner)
+
+	Output: [“spaghetti”, “meatballs”, “salad”, “bread”, “pizza”]
+                        [“dumplings”, “meatballs”, “salad”, “bread”, “pizza”]
+
+Appending (Adding Lists):
+	Ex) dinner = [ ]
+	     dinner.append(‘chicken’)
+	     dinner.append(‘beef’)
+	     dinner.append(‘shrimp’)
+
+	     print(dinner)
+
+	Output: [‘chicken’, ‘beef’, ‘shrimp’]
+
+Insert Lists:
+	Ex) dinner = [“spaghetti”, “meatballs”, “salad”]
+	     dinner.insert(0, “fries”)
+	     print(dinner)
+
+	Output: [“fries”, “spaghetti”, “meatballs”, “salad”]
+
+Delete (Removing Lists):
+	Ex) dinner = [“spaghetti”, “meatballs”, “salad”]
+	     print(dinner) 
+	     del dinner[0]
+	     print(dinner)
+
+	Output: [“spaghetti”, “meatballs”, “salad”]
+	           [“meatballs”, “salad”]
+
+Pop: removes the last item in a list, but it lets you work with that item after removing it.
+	Ex) dinner = [“potato”, “veggies”, “corn”]
+                 print(dinner) 
+                 popped_dinner=dinner.pop()
+                 print(dinner)
+                 print(popped_dinner)
+	
+	Output: [“potato”, “veggies”, “corn”]
+	           [“potato”, “veggies”]
+	           corn
+
+Remove: If you only know the value of the item you want to remove you can use the remove() method.   
+	Ex) dinner = [“potato”, “veggies”, “corn”]
+	     print(dinner) 
+	     dinner.remove(“veggies”)
+	     print(dinner)
+
+	Output: [“potato”, “veggies”, “corn”]
+	           [“potato”, “corn”]
+
+Sort: The sort() method changes the order of the list permanently (alphabetically).
+	Ex) cars =[‘bmw’, ‘audi’, ‘toyota’, ‘subaru’]
+	     cars.sort()
+                  print(cars)  
+	
+Sorted: The sorted() function lets you display your list in a particular order but doesn’t affect the actual order of the list.
+	Ex) print(sorted(cars))
+	     print (“\n Here is the original list again:”)
+	     print(cars)  
+
+Reverse: The reverse() method changes the order of a list permanently, but you can revert to the original order anytime by applying reverse() to the same list a second time. 
+	Ex) cars.reverse()
+	     print(cars)   
+
+-'def' is used to create your own functions.
+	Ex) def print_lyrics():                                 This means that the 'print_lyrics' function is going to print 'Hello' & 'World'
+	      print ("Hello")
+                   print ("World")
+
+	     print_lyrics()
+
+-'sum' calculates the total sum of all values in a list.
+-'len' calculates and returns a count of numbers in a list. 
+
+- Range: returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.
+Format: range(start, stop, step)
+
+start:	Optional. An integer number specifying at which position to start. Default is 0
+stop:	Required. An integer number specifying at which position to stop (not included).
+step:	Optional. An integer number specifying the incrementation. Default is 1
+
+	Ex) x = range(3, 20, 2)
+
+	    for n in x:
+  	    print(n)
+
+

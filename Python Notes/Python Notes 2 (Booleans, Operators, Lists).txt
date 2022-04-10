@@ -1,0 +1,124 @@
+bool(): Booleans give two outcomes -> True or False.
+- Any string is True, except empty strings.
+- Any number is True, except 0.
+- Any list, tuple, set, and dictionary are True, except empty ones.
+
+Arithmetic Operators:
++: Addition
+-: Subtraction
+*: Multiplication
+/: Division
+%: Modulus -> gives the remainder.
+**: Exponentiation -> a^b
+//: Floor Division -> rounds down the answer, and returns a whole number.
+
+Comparison Operators:
+==: Equal
+!=: Not equal
+>, <: Greater or lesser than
+>=, <=: Greater or lesser than or equal to
+
+Logical Operators:
+and: Returns True if both statements are true
+or: Returns True if one of the statements is true
+not: Returns False if the result is true
+
+Identity Operators: Used to compare objects
+is: Returns True if both variables are the same object
+is not: Returns True if both variables are not the same object
+
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+
+print(x is y)
+
+-> False
+x is not y because x is not the same object as y, even if they have the same content.
+
+Membership Operators: Test if a sequence is presented in an object
+in: Returns True if a sequence with the specified value is present in the object
+not in: Returns True if a sequence with the specified value is not present in the object
+
+x = ["apple", "banana"]
+
+print("banana" in x)
+
+-> True
+
+Assignment Operators:
+=
++= -> x+=3 is the same as x=x+3 (same for all of the assignment operators)
+-=
+*=
+/=
+%=
+//=
+**=
+
+List: used to store multiple items(any data) in a single variable. 
+list = ["apple", "banana"]
+or
+thislist = list(("apple", "banana", "cherry"))
+- First item has index 0, the second item has index 1 etc.
+
+insert(): inserts an item at a specific index
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+
+append(): add item to the end of the list
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+
+remove(): remove a specified item
+pop(): removes the specified index
+
+sort(): sorts the list alphanumerically, ascending (case sensitive)
+thislist = [100, 50, 65, 82, 23]
+thislist.sort()
+print(thislist)
+
+To sort descending, use (reverse = True)
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+
+copy(): You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+or
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+
+Join Lists: There are several ways to join two or more lists
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3)
+
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+for x in list2:
+  list1.append(x)
+print(list1)
+
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+list1.extend(list2)
+print(list1)
+
+List Methods:
+append()	Adds an element at the end of the list
+clear()	Removes all the elements from the list
+copy()	Returns a copy of the list
+count()	Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()	Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()	Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()	Sorts the list

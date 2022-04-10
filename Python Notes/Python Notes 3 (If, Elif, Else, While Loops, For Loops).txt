@@ -1,0 +1,79 @@
+if: if statement
+- if statement inside an if statement can exist
+- if statement with no content (to avoid errors)
+a = 33
+b = 200
+if b > a:
+  pass
+
+elif: if the previous conditions were not true, then try this condition
+else: catches anything which isn't caught by the preceding conditions.
+
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+
+- short hand if...else
+a = 330
+b = 330
+print("A") if a > b else print("=") if a == b else print("B")
+
+while: execute a set of statements as long as a condition is true.
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+
+break: stop the loop
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+
+continue: we can stop the current iteration, and continue with the next
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+
+else: can run a block of code once when the condition no longer is true
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
+
+for: used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+
+- break, continue, else, pass apply the same.
+
+range(): returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number.
+start:	Optional. An integer number specifying at which position to start. Default is 0
+stop:	Required. An integer number specifying at which position to stop (not included).
+step:	Optional. An integer number specifying the incrementation. Default is 1
+for x in range(2, 30, 3):
+  print(x)
+
+->2
+   5
+   8
+  11
+  14
+  17
+  20
+  23
+  26
+  29
